@@ -1,0 +1,35 @@
+<template name="home">
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="https://users.edu.turku.fi/eb0626/christmas_scene.jpg"> <!-- random image -->
+                <div class="caption left-align">
+                    <h4>{{session "gameName"}}</h4>
+                    <h5 class="light grey-text text-lighten-3">{{session "quote1"}}</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://c.tadst.com/gfx/600x400/christmas.jpg?1"> <!-- random image -->
+                <div class="caption center-align">
+                    <h4>{{session "gameName"}}</h4>
+                    <h5 class="light grey-text text-lighten-3">{{session "quote2"}}</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://c.tadst.com/gfx/600x400/christmas-day-canada.jpg?1"> <!-- random image -->
+                <div class="caption right-align">
+                    <h4>{{session "gameName"}}</h4>
+                    <h5 class="light grey-text text-lighten-3">{{session "quote3"}}</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="center-align">{{session "callToAction"}} <a class="btn-floating btn-large waves-effect waves-light red" href="/kies-cadeautje"><i class="material-icons">input</i></a></h5>
+            </div>
+        </div>
+    </div>
+</template>
