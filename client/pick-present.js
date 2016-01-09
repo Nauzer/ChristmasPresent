@@ -2,7 +2,7 @@ Template.pickPresent.onRendered(function() {
 
     Session.set("currentPresentType", undefined);
 
-    if (-1 < Meteor.user().emails[0].address.indexOf("gertienaus") ) {
+    if (-1 < Meteor.user().emails[0].address.indexOf("user") ) {
         // dan is het mama
         Session.set("presents", [
             {
@@ -30,35 +30,7 @@ Template.pickPresent.onRendered(function() {
                 imgUrl: "http://blog.personalbodyplan.com/wp-content/uploads/2015/07/214.jpg"
             }
         ]);
-    } else if (-1 < Meteor.user().emails[0].address.indexOf("nauspja") ) {
-        // dan is het papa
-        Session.set("presents", [
-            {
-                name: "1000 Trombones",
-                caption: "Als nieuw...",
-                type: "crap",
-                imgUrl: "http://www.jingleweb.nl/wp-content/uploads/2013/01/788901424_3a0fd1be66_z-300x254.jpg"
-            },
-            {
-                name: "Unne berg zooi!",
-                caption: "Om flink van te genieten",
-                type: "crap",
-                imgUrl: "https://ikbenaargh.files.wordpress.com/2015/11/img_0048.jpg"
-            },
-            {
-                name: "Goor fryer",
-                caption: "De smerigste vetbak van Nederland!",
-                type: "crap",
-                imgUrl: "http://i39.tinypic.com/2qnmlad.jpg"
-            },
-            {
-                name: "Airfryer Accessoire",
-                caption: "Bak alle hapjes in laagjes",
-                type: "present",
-                imgUrl: "https://s-media-cache-ak0.pinimg.com/736x/1c/34/47/1c3447aa89ef0b6e6fa1da0bbb9ef067.jpg"
-            }
-        ]);
-    } else if (-1 < Meteor.user().emails[0].address.indexOf("hoffelder") ) {
+    } else if (-1 < Meteor.user().emails[0].address.indexOf("user2") ) {
         // dan is het Hannah
         Session.set("presents", [
             {
@@ -81,7 +53,7 @@ Template.pickPresent.onRendered(function() {
             },
             {
                 name: "Treat yourself good",
-                caption: "Evening @ Zwaluwhoeve 26-12",
+                caption: "Evening @ Spa",
                 type: "present",
                 imgUrl: "http://cdn.nlladify-yanzhai.savviihq.com/wp-content/uploads/2015/02/Zwembad.jpg"
             }
@@ -186,16 +158,7 @@ Template.pickPresent.helpers({
     },
     showPoem: function() {
         try {
-            if ("crap" != Session.get("currentPresentType") && (-1 < Meteor.user().emails[0].address.indexOf("gertienaus") || -1 < Meteor.user().emails[0].address.indexOf("nauspja"))) {
-                return true;
-            }
-        } catch(e) {
-
-        }
-    },
-    showMessageHannah: function() {
-        try {
-            if ("crap" != Session.get("currentPresentType") && -1 < Meteor.user().emails[0].address.indexOf("hoffelder")) {
+            if ("crap" != Session.get("currentPresentType")) {
                 return true;
             }
         } catch(e) {
